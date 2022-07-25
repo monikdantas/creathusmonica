@@ -1,0 +1,600 @@
+CRITICAL - 2022-07-23 01:20:56 --> Undefined variable $titulo
+in APPPATH\Views\layouts\adm_layout.php on line 9.
+ 1 APPPATH\Views\layouts\adm_layout.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'APPPATH\\Views\\layouts\\adm_layout.php', 9)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layouts\\adm_layout.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layouts/adm_layout.php', [], true)
+ 5 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('administracao_v', [], true)
+ 6 APPPATH\Controllers\Usuario.php(31): view('administracao_v')
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuario->index()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 12:32:54 --> Invalid file: acesso_filme.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('acesso_filme.php')
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('acesso_filme.php', [], true)
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('filme_v', [], true)
+ 4 APPPATH\Controllers\Filme.php(28): view('filme_v', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->index()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-23 15:10:39 --> Unknown column 'filme.deleted_at' in 'where clause'
+CRITICAL - 2022-07-23 15:10:39 --> Unknown column 'filme.deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `filme`
+WHERE `filme`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `filme`
+WHERE `filme`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `filme`
+WHERE `filme`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `filme`
+WHERE `filme`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Filme.php(25): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->index()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-23 15:10:55 --> Unknown column 'filme.deleted_at' in 'where clause'
+CRITICAL - 2022-07-23 15:10:55 --> Unknown column 'filme.deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `filme`
+WHERE `filme`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `filme`
+WHERE `filme`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `filme`
+WHERE `filme`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `filme`
+WHERE `filme`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Filme.php(25): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->index()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 15:11:45 --> There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 718.
+ 1 SYSTEMPATH\BaseModel.php(718): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([], false)
+ 3 SYSTEMPATH\BaseModel.php(658): CodeIgniter\Model->insert([...], false)
+ 4 APPPATH\Controllers\Filme.php(38): CodeIgniter\BaseModel->save([...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->cadastrar()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 15:15:22 --> Array to string conversion
+in APPPATH\Controllers\Filme.php on line 38.
+ 1 APPPATH\Controllers\Filme.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Filme.php', 38)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->cadastrar()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 15:22:44 --> Array to string conversion
+in APPPATH\Controllers\Filme.php on line 38.
+ 1 APPPATH\Controllers\Filme.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Filme.php', 38)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->cadastrar()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 15:23:26 --> Array to string conversion
+in APPPATH\Controllers\Filme.php on line 38.
+ 1 APPPATH\Controllers\Filme.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Filme.php', 38)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->cadastrar()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-23 15:25:16 --> Unknown column 'created_at' in 'field list'
+CRITICAL - 2022-07-23 15:25:16 --> Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `filme` (`sinopse`, `created_at`, `updated_at`) VALUES (\'O filme aborda a questão recorrente da existência do mal através da história de Mackenzie Allen Phillips, um homem que vive sob o peso da experiência de ter sua filha Missy, de seis anos, raptada durante um acampamento de fim de semana. A menina nunca foi encontrada, mas sinais de que ela teria sido violentada e assassinada são achados em uma cabana perdida nas montanhas.\\r\\n\\r\\nVivendo desde então sob a \\"A Grande Tristeza\\", Mack, posteriormente, recebe um misterioso bilhete supostamente escrito por Deus, convidando-o para uma visita a essa mesma cabana. Ali, Mack terá um encontro inusitado com Deus, de quem tentará obter resposta para a inevitável pergunta: \\"Se Deus é tão poderoso, por que não faz nada para amenizar nosso sofrimento?\\".\', \'2022-07-23 15:25:16\', \'2022-07-23 15:25:16\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `filme` (`sinopse`, `created_at`, `updated_at`) VALUES (\'O filme aborda a questão recorrente da existência do mal através da história de Mackenzie Allen Phillips, um homem que vive sob o peso da experiência de ter sua filha Missy, de seis anos, raptada durante um acampamento de fim de semana. A menina nunca foi encontrada, mas sinais de que ela teria sido violentada e assassinada são achados em uma cabana perdida nas montanhas.\\r\\n\\r\\nVivendo desde então sob a \\"A Grande Tristeza\\", Mack, posteriormente, recebe um misterioso bilhete supostamente escrito por Deus, convidando-o para uma visita a essa mesma cabana. Ali, Mack terá um encontro inusitado com Deus, de quem tentará obter resposta para a inevitável pergunta: \\"Se Deus é tão poderoso, por que não faz nada para amenizar nosso sofrimento?\\".\', \'2022-07-23 15:25:16\', \'2022-07-23 15:25:16\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `filme` (`sinopse`, `created_at`, `updated_at`) VALUES (\'O filme aborda a questão recorrente da existência do mal através da história de Mackenzie Allen Phillips, um homem que vive sob o peso da experiência de ter sua filha Missy, de seis anos, raptada durante um acampamento de fim de semana. A menina nunca foi encontrada, mas sinais de que ela teria sido violentada e assassinada são achados em uma cabana perdida nas montanhas.\\r\\n\\r\\nVivendo desde então sob a \\"A Grande Tristeza\\", Mack, posteriormente, recebe um misterioso bilhete supostamente escrito por Deus, convidando-o para uma visita a essa mesma cabana. Ali, Mack terá um encontro inusitado com Deus, de quem tentará obter resposta para a inevitável pergunta: \\"Se Deus é tão poderoso, por que não faz nada para amenizar nosso sofrimento?\\".\', \'2022-07-23 15:25:16\', \'2022-07-23 15:25:16\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `filme` (`sinopse`, `created_at`, `updated_at`) VALUES (:sinopse:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(658): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Filme.php(40): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->cadastrar()
+11 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+12 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 15:31:15 --> Call to undefined function App\Controllers\index()
+in APPPATH\Controllers\Filme.php on line 41.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->cadastrar()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 15:33:54 --> Invalid file: messages.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('messages.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('messages', [], true)
+ 3 APPPATH\Controllers\Filme.php(51): view('messages', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->editar('1')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 16:25:47 --> Invalid file: messages.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('messages.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('messages', [], true)
+ 3 APPPATH\Controllers\Filme.php(48): view('messages', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->editar('1')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 16:51:34 --> Undefined variable $filme
+in APPPATH\Views\filme_v.php on line 35.
+ 1 APPPATH\Views\filme_v.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $filme', 'APPPATH\\Views\\filme_v.php', 35)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\filme_v.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('filme_v', [], true)
+ 5 APPPATH\Controllers\Filme.php(26): view('filme_v', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 16:55:54 --> Invalid file: messages.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('messages.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('messages', [], true)
+ 3 APPPATH\Controllers\Filme.php(48): view('messages', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->editar('1')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 17:12:26 --> Invalid file: messages.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('messages.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('messages', [], true)
+ 3 APPPATH\Controllers\Filme.php(48): view('messages', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->editar('1')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 17:39:41 --> Invalid file: messages.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('messages.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('messages', [], true)
+ 3 APPPATH\Controllers\Filme.php(48): view('messages', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->editar('1')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 17:47:43 --> Unclosed '{' on line 38
+in APPPATH\Views\filme_v.php on line 194.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('filme_v', [], true)
+ 3 APPPATH\Controllers\Filme.php(26): view('filme_v', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 17:49:05 --> syntax error, unexpected end of file
+in APPPATH\Views\filme_v.php on line 195.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('filme_v', [], true)
+ 3 APPPATH\Controllers\Filme.php(26): view('filme_v', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 17:53:02 --> syntax error, unexpected token "[", expecting identifier or variable or "{" or "$"
+in APPPATH\Views\filme_v.php on line 47.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('filme_v', [], true)
+ 3 APPPATH\Controllers\Filme.php(26): view('filme_v', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 17:55:22 --> Array to string conversion
+in APPPATH\Views\filme_v.php on line 38.
+ 1 APPPATH\Views\filme_v.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\filme_v.php', 38)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\filme_v.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('filme_v', [], true)
+ 5 APPPATH\Controllers\Filme.php(26): view('filme_v', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 17:55:42 --> syntax error, unexpected variable "$filmes"
+in APPPATH\Views\filme_v.php on line 38.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('filme_v', [], true)
+ 3 APPPATH\Controllers\Filme.php(26): view('filme_v', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 17:56:24 --> syntax error, unexpected variable "$filmes"
+in APPPATH\Views\filme_v.php on line 38.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('filme_v', [], true)
+ 3 APPPATH\Controllers\Filme.php(26): view('filme_v', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 18:02:46 --> Attempt to read property "id_filme" on array
+in APPPATH\Views\filme_v.php on line 41.
+ 1 APPPATH\Views\filme_v.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_filme" on array', 'APPPATH\\Views\\filme_v.php', 41)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\filme_v.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('filme_v', [], true)
+ 5 APPPATH\Controllers\Filme.php(26): view('filme_v', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 18:03:27 --> Undefined constant "id_filme"
+in APPPATH\Views\filme_v.php on line 41.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('filme_v', [], true)
+ 4 APPPATH\Controllers\Filme.php(26): view('filme_v', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->index()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 18:03:49 --> Attempt to read property "id_filme" on array
+in APPPATH\Views\filme_v.php on line 41.
+ 1 APPPATH\Views\filme_v.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_filme" on array', 'APPPATH\\Views\\filme_v.php', 41)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\filme_v.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('filme_v', [], true)
+ 5 APPPATH\Controllers\Filme.php(26): view('filme_v', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 18:04:18 --> Attempt to read property "id_filme" on array
+in APPPATH\Views\filme_v.php on line 48.
+ 1 APPPATH\Views\filme_v.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_filme" on array', 'APPPATH\\Views\\filme_v.php', 48)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\filme_v.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('filme_v', [], true)
+ 5 APPPATH\Controllers\Filme.php(26): view('filme_v', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 18:11:27 --> Undefined variable $id_filme
+in APPPATH\Views\filme_v.php on line 43.
+ 1 APPPATH\Views\filme_v.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_filme', 'APPPATH\\Views\\filme_v.php', 43)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\filme_v.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('filme_v', [], true)
+ 5 APPPATH\Controllers\Filme.php(26): view('filme_v', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 18:11:57 --> Undefined array key 4
+in APPPATH\Views\filme_v.php on line 43.
+ 1 APPPATH\Views\filme_v.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'APPPATH\\Views\\filme_v.php', 43)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\filme_v.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('filme_v', [], true)
+ 5 APPPATH\Controllers\Filme.php(26): view('filme_v', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 18:13:20 --> Undefined variable $i
+in APPPATH\Views\filme_v.php on line 40.
+ 1 APPPATH\Views\filme_v.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $i', 'APPPATH\\Views\\filme_v.php', 40)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\filme_v.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('filme_v', [], true)
+ 5 APPPATH\Controllers\Filme.php(26): view('filme_v', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 18:13:42 --> Attempt to read property "id_filme" on array
+in APPPATH\Views\filme_v.php on line 49.
+ 1 APPPATH\Views\filme_v.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_filme" on array', 'APPPATH\\Views\\filme_v.php', 49)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\filme_v.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('filme_v', [], true)
+ 5 APPPATH\Controllers\Filme.php(26): view('filme_v', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 18:14:58 --> Undefined array key "id_filme"
+in APPPATH\Views\filme_v.php on line 54.
+ 1 APPPATH\Views\filme_v.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_filme"', 'APPPATH\\Views\\filme_v.php', 54)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\filme_v.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('filme_v', [], true)
+ 5 APPPATH\Controllers\Filme.php(26): view('filme_v', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 18:17:17 --> Undefined array key "titulo"
+in APPPATH\Views\filme_v.php on line 88.
+ 1 APPPATH\Views\filme_v.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "titulo"', 'APPPATH\\Views\\filme_v.php', 88)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\filme_v.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('filme_v', [], true)
+ 5 APPPATH\Controllers\Filme.php(26): view('filme_v', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 18:18:49 --> Invalid file: messages.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('messages.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('messages', [], true)
+ 3 APPPATH\Controllers\Filme.php(48): view('messages', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->editar('3')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 18:36:08 --> Undefined variable $id
+in APPPATH\Controllers\Filme.php on line 33.
+ 1 APPPATH\Controllers\Filme.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'APPPATH\\Controllers\\Filme.php', 33)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->salvar()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 18:39:11 --> Undefined property: App\Controllers\Filme::$input
+in APPPATH\Controllers\Filme.php on line 33.
+ 1 APPPATH\Controllers\Filme.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Filme::$input', 'APPPATH\\Controllers\\Filme.php', 33)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->salvar()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 18:56:21 --> Invalid file: messages.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('messages.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('messages', [], true)
+ 3 APPPATH\Controllers\Filme.php(45): view('messages', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->editar('5')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 19:00:20 --> Invalid file: messages.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('messages.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('messages', [], true)
+ 3 APPPATH\Controllers\Filme.php(45): view('messages', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->editar('5')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 19:03:04 --> Invalid file: messages.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('messages.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('messages', [], true)
+ 3 APPPATH\Controllers\Filme.php(45): view('messages', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->editar('1')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 19:12:54 --> Undefined property: CodeIgniter\View\View::$session
+in APPPATH\Views\filme_v.php on line 4.
+ 1 APPPATH\Views\filme_v.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$session', 'APPPATH\\Views\\filme_v.php', 4)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\filme_v.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('filme_v', [], true)
+ 5 APPPATH\Controllers\Filme.php(26): view('filme_v', [...])
+ 6 APPPATH\Controllers\Filme.php(75): App\Controllers\Filme->index()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->excluir('3')
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 19:13:15 --> Undefined variable $msg
+in APPPATH\Views\filme_v.php on line 4.
+ 1 APPPATH\Views\filme_v.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $msg', 'APPPATH\\Views\\filme_v.php', 4)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\filme_v.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('filme_v', [], true)
+ 5 APPPATH\Controllers\Filme.php(26): view('filme_v', [...])
+ 6 APPPATH\Controllers\Filme.php(75): App\Controllers\Filme->index()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->excluir('3')
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 19:19:59 --> Call to undefined function App\Controllers\upload()
+in APPPATH\Controllers\Filme.php on line 34.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->salvar()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 20:39:34 --> Undefined variable $usuarios
+in APPPATH\Views\usuario_v.php on line 41.
+ 1 APPPATH\Views\usuario_v.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuarios', 'APPPATH\\Views\\usuario_v.php', 41)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario_v.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('usuario_v', [], true)
+ 5 APPPATH\Controllers\Usuario.php(31): view('usuario_v', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuario->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-23 20:40:54 --> Unknown column 'usuario.deleted_at' in 'where clause'
+CRITICAL - 2022-07-23 20:40:54 --> Unknown column 'usuario.deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `usuario`
+WHERE `usuario`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `usuario`
+WHERE `usuario`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `usuario`
+WHERE `usuario`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuario`
+WHERE `usuario`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Usuario.php(23): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuario->index()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-23 20:41:06 --> Unknown column 'usuario.deleted_at' in 'where clause'
+CRITICAL - 2022-07-23 20:41:06 --> Unknown column 'usuario.deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `usuario`
+WHERE `usuario`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `usuario`
+WHERE `usuario`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `usuario`
+WHERE `usuario`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuario`
+WHERE `usuario`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Usuario.php(23): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuario->index()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 21:05:02 --> Call to undefined method App\Controllers\Usuario::upload()
+in APPPATH\Controllers\Usuario.php on line 58.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuario->salvar()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 22:01:07 --> Invalid file: administracao_v.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('administracao_v.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('administracao_v', [], true)
+ 3 APPPATH\Controllers\Usuario.php(35): view('administracao_v', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuario->inicio()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 22:01:14 --> Invalid file: usuario_v.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('usuario_v.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('usuario_v', [], true)
+ 3 APPPATH\Controllers\Usuario.php(26): view('usuario_v', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuario->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 22:01:43 --> Invalid file: usuario_v.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('usuario_v.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('usuario_v', [], true)
+ 3 APPPATH\Controllers\Usuario.php(26): view('usuario_v', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuario->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 22:01:56 --> Invalid file: usuario_v.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('usuario_v.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('usuario_v', [], true)
+ 3 APPPATH\Controllers\Usuario.php(26): view('usuario_v', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuario->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 22:01:56 --> Invalid file: usuario_v.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('usuario_v.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('usuario_v', [], true)
+ 3 APPPATH\Controllers\Usuario.php(26): view('usuario_v', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuario->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 22:02:00 --> Invalid file: usuario_v.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('usuario_v.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('usuario_v', [], true)
+ 3 APPPATH\Controllers\Usuario.php(26): view('usuario_v', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuario->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 22:03:08 --> Invalid file: usuario_v.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('usuario_v.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('usuario_v', [], true)
+ 3 APPPATH\Controllers\Usuario.php(26): view('usuario_v', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuario->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 22:03:10 --> Invalid file: usuario_v.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('usuario_v.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('usuario_v', [], true)
+ 3 APPPATH\Controllers\Usuario.php(26): view('usuario_v', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuario->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 22:03:27 --> Invalid file: usuario_v.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('usuario_v.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('usuario_v', [], true)
+ 3 APPPATH\Controllers\Usuario.php(26): view('usuario_v', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuario->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 22:03:29 --> Invalid file: usuario_v.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('usuario_v.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('usuario_v', [], true)
+ 3 APPPATH\Controllers\Usuario.php(26): view('usuario_v', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuario->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 22:04:05 --> Invalid file: filme_v.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('filme_v.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('filme_v', [], true)
+ 3 APPPATH\Controllers\Filme.php(26): view('filme_v', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 22:12:00 --> Undefined array key 4
+in APPPATH\Views\administracao\filme_v.php on line 93.
+ 1 APPPATH\Views\administracao\filme_v.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'APPPATH\\Views\\administracao\\filme_v.php', 93)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\administracao\\filme_v.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('administracao/filme_v', [], true)
+ 5 APPPATH\Controllers\Filme.php(26): view('administracao/filme_v', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-23 23:04:42 --> Invalid file: inicio_v.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('inicio_v.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('inicio_v', [], true)
+ 3 APPPATH\Controllers\Usuario.php(61): view('inicio_v', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuario->autenticar()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
