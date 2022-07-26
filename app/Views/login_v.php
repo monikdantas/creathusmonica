@@ -107,7 +107,7 @@ body {
   <body class="text-center">
 
   <main class="form-signin w-100 m-auto">
-  <?php echo form_open('usuario/inicio_usuario') ?>
+  <?php echo form_open('login/inicio_usuario') ?>
     <img class="mb-4" src="assets/img/FaviconCreathus.png" alt="" width="80" height="85">
     <h1 class="h3 mb-3 fw-normal">Conta Creathus</h1>
 

@@ -6,15 +6,21 @@ use CodeIgniter\Controller;
 
 use App\Controllers\BaseController;
 
+use App\Controllers\Usuario;
+
 use App\Models\Usuario_m;
 
-class Login extends BaseController
+use App\Models\Filme_m;
+
+class Login extends BaseController 
 {
 
    private $usuarioModel;
+   private $filmeModel;
  
    public function __construct(){
 		$this->usuarioModel = new Usuario_m;
+        $this->filmeModel = new Filme_m;
    }
 	
 	public function index()
@@ -37,10 +43,19 @@ class Login extends BaseController
 
     public function inicio_usuario()
 	{		
-        $dados['titulo'] 	= 	'Creathus :: Início';		
-        //$usuarios = $this->usuarioModel->findAll();
-        //$dados['usuarios'] = $usuarios;
-  
+        $dados['titulo'] 	= 	'Creathus :: Início';			
+        
+        
+        $filmes = $this->filmeModel
+        ->orderBy('created_at', 'desc')
+        ->findAll(10);
+        $dados['filmes'] = $filmes;
+
+        $destaques = $this->filmeModel
+        ->orderBy('created_at', 'desc')
+        ->findAll(3);
+        $dados['destaques'] = $filmes;
+       
         return view('usuario/inicio_v',$dados);
     }
 

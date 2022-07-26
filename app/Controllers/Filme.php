@@ -118,7 +118,13 @@ class Filme extends BaseController
         }
     }
 
+    public function filmes_lancamentos (){
+        $filmes = $this->filmeModel
+        ->orderBy('created_at', 'desc')
+        ->findAll(limit, 10);
+        return $filmes;
 
+    }
     
 
 }

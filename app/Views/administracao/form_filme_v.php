@@ -33,7 +33,8 @@
 endforeach ?>
             <!--<img class="d-block mx-auto mb-4" src="<?php // echo base_url('assets/img/filmes.jpeg') ?>" alt="" width="304" height="430">-->
             <div class="d-grid text-center" id="imagem">
-                                  </div>
+            <?php echo isset($filme['id_filme']) ? "<img class='mb-3' id='ajaxImgUpload' width='200' alt='Preview Image' src='".base_url('assets/filmes/'.$filme['imagem'])."' />" : '' ?>
+            </div>
           </div>
           <div class="col-md-7 col-lg-8">
             <?php echo form_open_multipart('filme/salvar') ?>
@@ -64,8 +65,11 @@ endforeach ?>
                 
               </div>
               <input type="hidden" name="id_filme" value="<?php echo isset($filme['id_filme']) ? $filme['id_filme'] : '' ?>" />
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCELAR</button>
-                            <button type="submit" class="btn btn-primary">SALVAR</button>
+              <a href="<?php echo site_url('filme/index/') ?>" >
+              <button type="button" class="btn btn-secondary" >CANCELAR</button>
+              </button>
+              </a>
+                 <button type="submit" class="btn btn-primary">SALVAR</button>
               <?php echo form_close(); ?>
           </div>
         </div>

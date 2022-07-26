@@ -28,44 +28,7 @@ class Usuario extends BaseController
         return view('administracao/usuario_v',$dados);
     }
 
-    public function upload()
-    {
-        $validationRule = [
-            'userfile' => [
-                'label' => 'Image File',
-                'rules' => 'uploaded[userfile]'
-                    . '|is_image[userfile]'
-                    . '|mime_in[userfile,image/jpg,image/jpeg,image/gif,image/png,image/webp]'
-                    . '|max_size[userfile,200]'
-                    . '|max_dims[userfile,1024,768]',
-            ],
-        ];
-        if (! $this->validate($validationRule)) {
-            $data = ['errors' => $this->validator->getErrors()];
-
-            return view('login_v', $data);
-        }
-
-        $img = $this->request->getFile('userfile');
-
-        if (! $img->hasMoved()) {
-            //$filepath = WRITEPATH . 'uploads/imagens/'. $img->store();
-
-           // $filepath = $img->store(WRITEPATH . 'uploads/', 'user_name.jpg');
-           $filepath = $img->move(ROOTPATH . 'public/assets/filmes', 'ult_teste.jpg');
-
-            echo $filepath;
-
-            //$filepath = WRITEPATH . base_url('imagens/') . $img->store();
-
-            $data = ['uploaded_flleinfo' => new File($filepath)];
-
-            return view('upload_success', $data);
-        }
-        $data = ['errors' => 'The file has already been moved.'];
-
-        return view('login_v', $data);
-    }
+    
 
     public function inicio_adm()
 	{		
@@ -76,14 +39,7 @@ class Usuario extends BaseController
         return view('administracao/inicio_v',$dados);
     }
 
-    public function inicio_usuario()
-	{		
-        $dados['titulo'] 	= 	'Creathus :: Início';		
-        //$usuarios = $this->usuarioModel->findAll();
-        //$dados['usuarios'] = $usuarios;
-  
-        return view('usuario/inicio_v',$dados);
-    }
+
 
     public function cadastrar()
 	{		

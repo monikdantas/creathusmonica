@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.98.0">
-  <title><?php echo $titulo ?></title>
+    <title><?php echo $titulo ?></title>
     
 
     <link href="<?php echo base_url('assets/css/lixo/bootstrap.min.css') ?>" rel="stylesheet">
@@ -313,8 +313,7 @@
   <body>
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
 <img class="mb-1" src="<?php echo base_url('assets/img/FaviconCreathus.png')?> " alt="" width="50" height="50">
-<label class="nav-link px-2 text-white" >Creathus </label>
- 
+<label class="nav-link px-2 text-white fs-4" >Creathus </label>
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
     <button type="button" class="btn btn-outline-light me-2">Sair
