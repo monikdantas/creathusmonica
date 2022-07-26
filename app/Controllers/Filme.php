@@ -50,14 +50,22 @@ class Filme extends BaseController
 	{		
 
         $img = $this->request->getFile('capa');
-        //$this->mover_img($img);
+        
         if ($this->filmeModel->save($this->request->getPost())){
             $dados['msg'] = "Filme salvo com sucesso!";
             $id_filme = $this->request->getPost('id_filme');
-            $id = isset($id_filme) ? $id_filme : $this->filmeModel->getInsertID();
-            $nome = $id.'.jpg';
+            echo "oi". $this->filmeModel->getInsertID();
 
-            //echo "ID:".$id."/NOME ARQUIVO:".$nome;
+            if ($id_filme != 0){ 
+                $id = $id_filme;
+             }
+            
+             if ($this->filmeModel->getInsertID() != 0){ 
+                $id = $this->filmeModel->getInsertID();
+             }
+         
+        
+            $nome = $id.'.jpg';
             
             $this->filmeModel
                 ->where('id_filme', $id)
@@ -73,43 +81,24 @@ class Filme extends BaseController
     public function upload($img, $nome)
     {
 
-       /* $validationRule = [
-            'userfile' => [
-                'label' => 'Image File',
-                'rules' => 'uploaded[userfile]'
-                    . '|is_image[userfile]'
-                    . '|mime_in[userfile,image/jpg,image/jpeg,image/gif,image/png,image/webp]'
-                    . '|max_size[userfile,200]'
-                    . '|max_dims[userfile,1024,768]',
-            ],
-        ];
-        if (! $this->validate($validationRule)) {
-            echo "\ nao validou";
-            $data = ['errors' => $this->validator->getErrors()];
+        if ($img== ""){
+        } else{
+            if (! $img->hasMoved()) {
+                
+                $filename = ROOTPATH . 'public/assets/filmes/' . $nome;
+               
+                if (file_exists($filename)){
+                    
+                    unlink($filename);
 
-            //return view('login_v', $data);
-        }*/
-      
+                }
+                $filepath = $img->move(ROOTPATH . 'public/assets/filmes', $nome);
 
-        if (! $img->hasMoved()) {
-            //$filepath = WRITEPATH . 'uploads/imagens/'. $img->store();
-            $filepath = $img->move(ROOTPATH . 'public/assets/filmes', $nome);
-
-           // $filepath = $img->store(WRITEPATH . 'uploads/', 'user_name.jpg');
-           //$filepath = $img->move(ROOTPATH . 'public/assets/filmes', 'ult_teste.jpg');
-
-
-            //$filepath = WRITEPATH . base_url('imagens/') . $img->store();
-
-           // $data = ['uploaded_flleinfo' => new File($filepath)];
-
-            //return view('upload_success', $data);
-            //return $img;
+            }
         }
-        $data = ['errors' => 'The file has already been moved.'];
-
-        //return view('login_v', $data);
+        
     }
+
 
     public function excluir($id){
         if ($this->filmeModel->delete($id)){

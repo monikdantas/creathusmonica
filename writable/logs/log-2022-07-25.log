@@ -708,3 +708,142 @@ in APPPATH\Views\usuario\layout.php on line 176.
  7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
  8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-25 21:48:34 --> The original file is not a valid file.
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 137.
+ 1 SYSTEMPATH\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 APPPATH\Controllers\Filme.php(96): CodeIgniter\HTTP\Files\UploadedFile->move('FCPATH\\assets\\filmes', '1.jpg')
+ 3 APPPATH\Controllers\Filme.php(66): App\Controllers\Filme->upload(Object(CodeIgniter\HTTP\Files\UploadedFile), '1.jpg')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->salvar()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-25 21:50:56 --> The original file is not a valid file.
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 137.
+ 1 SYSTEMPATH\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 APPPATH\Controllers\Filme.php(96): CodeIgniter\HTTP\Files\UploadedFile->move('FCPATH\\assets\\filmes', '1.jpg')
+ 3 APPPATH\Controllers\Filme.php(66): App\Controllers\Filme->upload(Object(CodeIgniter\HTTP\Files\UploadedFile), '1.jpg')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->salvar()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-25 21:54:17 --> The original file is not a valid file.
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 137.
+ 1 SYSTEMPATH\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 APPPATH\Controllers\Filme.php(80): CodeIgniter\HTTP\Files\UploadedFile->move('FCPATH\\assets\\filmes', '2.jpg')
+ 3 APPPATH\Controllers\Filme.php(65): App\Controllers\Filme->upload(Object(CodeIgniter\HTTP\Files\UploadedFile), '2.jpg')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->salvar()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-25 21:57:13 --> syntax error, unexpected identifier "is"
+in APPPATH\Controllers\Filme.php on line 76.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('filme/salvar')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('filme/salvar')
+ 3 SYSTEMPATH\CodeIgniter.php(771): CodeIgniter\Router\Router->handle('filme/salvar')
+ 4 SYSTEMPATH\CodeIgniter.php(415): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-25 22:06:48 --> syntax error, unexpected token ","
+in APPPATH\Controllers\Filme.php on line 79.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('filme/index')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('filme/index')
+ 3 SYSTEMPATH\CodeIgniter.php(771): CodeIgniter\Router\Router->handle('filme/index')
+ 4 SYSTEMPATH\CodeIgniter.php(415): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-25 22:12:09 --> The original file is not a valid file.
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 137.
+ 1 SYSTEMPATH\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 APPPATH\Controllers\Filme.php(86): CodeIgniter\HTTP\Files\UploadedFile->move('FCPATH\\assets\\filmes', '1.jpg')
+ 3 APPPATH\Controllers\Filme.php(65): App\Controllers\Filme->upload(Object(CodeIgniter\HTTP\Files\UploadedFile), '1.jpg')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Filme->salvar()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Filme))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-25 22:36:50 --> syntax error, unexpected variable "$id", expecting "," or ";"
+in APPPATH\Controllers\Filme.php on line 58.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('filme/salvar')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('filme/salvar')
+ 3 SYSTEMPATH\CodeIgniter.php(771): CodeIgniter\Router\Router->handle('filme/salvar')
+ 4 SYSTEMPATH\CodeIgniter.php(415): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-25 22:36:58 --> syntax error, unexpected variable "$id", expecting "," or ";"
+in APPPATH\Controllers\Filme.php on line 58.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('filme/novo_filme')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('filme/novo_filme')
+ 3 SYSTEMPATH\CodeIgniter.php(771): CodeIgniter\Router\Router->handle('filme/novo_filme')
+ 4 SYSTEMPATH\CodeIgniter.php(415): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-25 22:37:01 --> syntax error, unexpected variable "$id", expecting "," or ";"
+in APPPATH\Controllers\Filme.php on line 58.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('filme/index')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('filme/index')
+ 3 SYSTEMPATH\CodeIgniter.php(771): CodeIgniter\Router\Router->handle('filme/index')
+ 4 SYSTEMPATH\CodeIgniter.php(415): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-25 22:37:04 --> syntax error, unexpected variable "$id", expecting "," or ";"
+in APPPATH\Controllers\Filme.php on line 58.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('filme/index')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('filme/index')
+ 3 SYSTEMPATH\CodeIgniter.php(771): CodeIgniter\Router\Router->handle('filme/index')
+ 4 SYSTEMPATH\CodeIgniter.php(415): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-25 22:37:06 --> syntax error, unexpected variable "$id", expecting "," or ";"
+in APPPATH\Controllers\Filme.php on line 58.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('filme/index')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('filme/index')
+ 3 SYSTEMPATH\CodeIgniter.php(771): CodeIgniter\Router\Router->handle('filme/index')
+ 4 SYSTEMPATH\CodeIgniter.php(415): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-25 22:40:53 --> syntax error, unexpected token "isset", expecting "("
+in APPPATH\Controllers\Filme.php on line 59.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('filme/salvar')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('filme/salvar')
+ 3 SYSTEMPATH\CodeIgniter.php(771): CodeIgniter\Router\Router->handle('filme/salvar')
+ 4 SYSTEMPATH\CodeIgniter.php(415): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-25 22:50:03 --> Undefined array key "cpf"
+in APPPATH\Views\administracao\usuario_v.php on line 47.
+ 1 APPPATH\Views\administracao\usuario_v.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cpf"', 'APPPATH\\Views\\administracao\\usuario_v.php', 47)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\administracao\\usuario_v.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('administracao/usuario_v', [], true)
+ 5 APPPATH\Controllers\Usuario.php(28): view('administracao/usuario_v', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuario->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-25 22:50:25 --> Undefined array key "cpf"
+in APPPATH\Views\administracao\usuario_v.php on line 47.
+ 1 APPPATH\Views\administracao\usuario_v.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cpf"', 'APPPATH\\Views\\administracao\\usuario_v.php', 47)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\administracao\\usuario_v.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('administracao/usuario_v', [], true)
+ 5 APPPATH\Controllers\Usuario.php(28): view('administracao/usuario_v', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuario->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-25 22:50:31 --> Undefined array key "cpf"
+in APPPATH\Views\administracao\usuario_v.php on line 47.
+ 1 APPPATH\Views\administracao\usuario_v.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cpf"', 'APPPATH\\Views\\administracao\\usuario_v.php', 47)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\administracao\\usuario_v.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('administracao/usuario_v', [], true)
+ 5 APPPATH\Controllers\Usuario.php(28): view('administracao/usuario_v', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuario->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-25 22:57:19 --> Too few arguments to function App\Controllers\Login::visualizar_filme(), 0 passed in C:\xampp\htdocs\creathusmonica\system\CodeIgniter.php on line 896 and exactly 1 expected
+in APPPATH\Controllers\Login.php on line 62.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->visualizar_filme()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

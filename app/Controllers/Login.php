@@ -59,6 +59,14 @@ class Login extends BaseController
         return view('usuario/inicio_v',$dados);
     }
 
+    public function visualizar_filme($id)
+	{		
+        return view('usuario/visualizar_filme_v', [
+            'titulo' 	=> 	'Creathus :: Filmes',
+            'filme' => $this->filmeModel->find($id)
+        ]);
+    }
+
     public function cadastrar()
 	{		
         $dados['titulo'] 	= 	'Creathus :: Cadastro';		

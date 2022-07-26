@@ -17,7 +17,6 @@ class Usuario_m extends Model
     protected $allowedFields        =   [
         'nome',
         'email',
-        'cpf',
         'senha'
     ];
       

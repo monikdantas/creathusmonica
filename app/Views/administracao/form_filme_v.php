@@ -57,7 +57,7 @@ endforeach ?>
                                   <div class="mb-3">
                                   
                                       <input type="file" name="capa" id="capa" id="capa" onchange="onFileUpload(this);"
-                                          class="form-control"  accept="image/*" required>
+                                          class="form-control"  accept="image/*" <?php echo isset($filme['imagem']) ? : 'required' ?> >
                                   </div></div>
 
                             

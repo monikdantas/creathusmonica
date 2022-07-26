@@ -71,7 +71,9 @@
 
       <div class="col-lg-3 pt-3 ">
        <!-- <svg class="bd-placeholder-img rounded-square" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>-->
-        <img src='<?php echo base_url('assets/filmes/'.$filme['imagem']); ?>'  alt='Capa' width='170' height='220'>
+       <a class="nav-link" href="<?php echo site_url('login/visualizar_filme/'.$filme['id_filme']) ?>" >
+       <img src='<?php echo base_url('assets/filmes/'.$filme['imagem']); ?>'  alt='Capa' width='170' height='220'>
+      </a>
        <!-- <h6 class="fw-normal"><?php //echo $filme['titulo'] ?></h6>-->
         <!--<p><a class="btn btn-secondary" href="#">Saber mais &raquo;</a></p>-->
       </div><!-- /.col-lg-4 -->

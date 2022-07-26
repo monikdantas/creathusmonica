@@ -29,7 +29,6 @@
         <tr class="table-dark">
           <th scope="col" width="5%">ID</th>
           <th scope="col" width="30%">Nome</th>
-          <th scope="col" width="30%">CPF</th>
           <th scope="col" width="30%">E-mail</th>
           <th scope="col" colspan="3" width="10%">Ações</th>
         </tr>
@@ -44,7 +43,6 @@
               <tr class="align-middle text-center">
                 <td><?php echo $usuario[$i]['id_usuario'] ?></td>
                 <td><?php echo $usuario[$i]['nome'] ?></td>
-                <td><?php echo $usuario[$i]['cpf'] ?></td>
                 <td><?php echo $usuario[$i]['email'] ?></td>
                 <td>
                   <button type="button" title="Visualizar" data-toggle="modal" data-target="#modalVisualizar<?php echo $usuario[$i]['id_usuario'] ?>">
@@ -82,10 +80,7 @@
                                 <label for="titulo" class="col-form-label">Nome:</label>
                                 <input type="text" class="form-control" id="nome" name="nome" value="<?php echo isset($usuario[$i]['nome']) ? $usuario[$i]['nome'] : '' ?>" readonly>
                               </div>
-                              <div class="form-group">
-                                <label for="titulo" class="col-form-label">CPF:</label>
-                                <input type="text" class="form-control" id="cpf" name="cpf" value="<?php echo isset($usuario[$i]['cpf']) ? $usuario[$i]['cpf'] : '' ?>" readonly>
-                              </div>
+                            
                               <div class="form-group">
                                 <label for="titulo" class="col-form-label">E-mail:</label>
                                 <input type="text" class="form-control" id="email" name="email" value="<?php echo isset($usuario[$i]['email']) ? $usuario[$i]['email'] : '' ?>" readonly>
@@ -118,10 +113,7 @@
                                 <label for="titulo" class="col-form-label">Nome:</label>
                                 <input type="text" class="form-control" id="nome" name="nome" value="<?php echo isset($usuario[$i]['nome']) ? $usuario[$i]['nome'] : '' ?>" required>
                               </div>
-                              <div class="form-group">
-                                <label for="sinopse" class="col-form-label">CPF:</label>
-                                <input type="text" class="form-control" id="cpf" name="cpf" value="<?php echo isset($usuario[$i]['cpf']) ? $usuario[$i]['cpf'] : '' ?>" required>
-                              </div>
+                           
                               <div class="form-group">
                                 <label for="sinopse" class="col-form-label">E-mail:</label>
                                 <input type="text" class="form-control" id="email" name="email" value="<?php echo isset($usuario[$i]['email']) ? $usuario[$i]['email'] : '' ?>" required>

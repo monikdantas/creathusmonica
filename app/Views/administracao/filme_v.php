@@ -84,7 +84,16 @@
                             </button>
                           </div>
                           <div class="modal-body">
-                          <?php echo form_open('filme/salvar') ?>
+                        
+                          <div class="row">
+                          <div class="col-8 col-sm-3">
+                          <?php echo isset($filme[$i]['id_filme']) ? "<img class='mb-3' id='ajaxImgUpload' width='200' alt='Preview Image' src='".base_url('assets/filmes/'.$filme[$i]['imagem'])."' />" : '' ?>
+           
+                        </div>
+                        
+          <div class="col-4 col-sm-9">
+            
+                          
                               <div class="form-group">
                                 <label for="titulo" class="col-form-label">Título:</label>
                                 <input type="text" class="form-control" id="titulo" name="titulo" value="<?php echo isset($filme[$i]['titulo']) ? $filme[$i]['titulo'] : '' ?>" readonly>
@@ -93,13 +102,9 @@
                                 <label for="sinopse" class="col-form-label">Sinopse:</label>
                                 <textarea rows="4" class="form-control" id="sinopse" name="sinopse" readonly> <?php echo isset($filme[$i]['sinopse']) ? $filme[$i]['sinopse'] : '' ?> </textarea>
                               </div>
-                              <div class="form-group">
-                                <div class="custom-file">
-                                  <label for="imagem" class="col-form-label">Capa:</label>
-                                  <img src='#' class='img-thumbnail' alt='Capa' width='65' height='76'>
-                                </div>
-                            
-                              </div>
+                             
+            </div>
+            </div>
                               
                               
                           </div>
